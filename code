@@ -1,0 +1,30 @@
+linkedin@MuhammadHamid
+whatsapp:03248061046
+
+
+#! /usr/bin/env node
+
+import chalk from "chalk";
+import inquirer from "inquirer";
+
+
+
+let genNum = Math.floor(Math.random()*2);
+
+let user = await inquirer.prompt ({
+name:"numb1",
+type: "list",
+message: "please select the number:",
+choices:["o", "1"],
+
+
+});
+
+if (genNum== parseInt (user.numb1)) {
+console.log (chalk.bold.redBright("congratulation you won"));
+
+
+ }
+ else {
+    console.log(chalk.bold.redBright("sorry, better luck next time" ));
+ }
